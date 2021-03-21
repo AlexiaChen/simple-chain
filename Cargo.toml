@@ -1,0 +1,21 @@
+[workspace]
+members = [
+  "src/blockchain",
+  "src/cli",
+  "src/crypto",
+  "src/node",
+  "src/p2p",
+  "src/txpool",
+  "src/types",
+  "src/wallet",
+]
+
+[profile.dev]
+overflow-checks = true
+panic = "unwind"
+
+[profile.release]
+incremental = false
+lto = true
+overflow-checks = false
+panic = "unwind"
