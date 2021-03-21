@@ -2,6 +2,7 @@
 members = [
   "src/blockchain",
   "src/cli",
+  "src/consense"
   "src/crypto",
   "src/node",
   "src/p2p",
