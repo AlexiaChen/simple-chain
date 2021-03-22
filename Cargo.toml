@@ -1,14 +1,14 @@
 [workspace]
 members = [
-  "src/blockchain",
-  "src/cli",
-  "src/consense"
-  "src/crypto",
-  "src/node",
-  "src/p2p",
-  "src/txpool",
-  "src/types",
-  "src/wallet",
+  "blockchain",
+  "cli",
+  "consense",
+  "crypto",
+  "node",
+  "p2p",
+  "txpool",
+  "types",
+  "wallet",
 ]
 
 [profile.dev]
