@@ -4,6 +4,7 @@ members = [
   "cli",
   "consense",
   "crypto",
+  "db",
   "node",
   "p2p",
   "txpool",
