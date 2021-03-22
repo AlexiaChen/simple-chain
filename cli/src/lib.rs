@@ -19,6 +19,7 @@ pub struct Config {
     pub genesis_reward_addr: String,
     pub balance_addr: String,
     pub list_addr_limit: usize,
+    pub miner_addr: String,
 }
 
 impl Config {
@@ -95,9 +96,14 @@ impl Config {
     fn check_and_call(self, cmd: Option<&str>) -> Result<(), String> {
         println!("Match Cmd: {:?}", cmd);
         match cmd {
-            Some("zip") => {}
-            Some("ping") => {}
-            Some("url") => {}
+            Some("createblockchain") => {}
+            Some("makekeypair") => {}
+            Some("getbalance") => {}
+            Some("listaddress") => {}
+            Some("getblock") => {}
+            Some("gettx") => {}
+            Some("sendtx") => {}
+            Some("startnode") => {}
             _ => unreachable!(),
         }
         Ok(())
