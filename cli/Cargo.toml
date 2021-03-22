@@ -1,9 +1,10 @@
 [package]
-name = "cli"
-version = "0.1.0"
 authors = ["MathxH Chen <brainfvck@foxmail.com>"]
 edition = "2018"
+name = "cli"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+app = "0.6.5"

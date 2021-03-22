@@ -1,3 +1,6 @@
+use cli::Cli;
+
 fn main() {
-    println!("Hello, world!");
+    let cli = Cli::new();
+    cli.run();
 }
