@@ -9,3 +9,4 @@ version = "0.1.0"
 [dependencies]
 
 cli = {path = "../cli"}
+tokio = {version = "1", features = ["full"]}

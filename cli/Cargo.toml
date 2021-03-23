@@ -8,3 +8,4 @@ version = "0.1.0"
 
 [dependencies]
 app = "0.6.5"
+network = {path = "../network/"}

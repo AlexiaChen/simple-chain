@@ -6,7 +6,7 @@ members = [
   "crypto",
   "db",
   "node",
-  "p2p",
+  "network",
   "txpool",
   "types",
   "wallet",

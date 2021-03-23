@@ -1,6 +1,7 @@
 use cli::Cli;
 
-fn main() {
+#[tokio::main]
+pub async fn main() {
     let cli = Cli::new();
     cli.run();
 }

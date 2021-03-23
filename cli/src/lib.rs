@@ -2,6 +2,7 @@ extern crate app;
 
 #[allow(unused_imports)]
 use app::{App, Args, Cmd, Opt, OptTypo, OptValue, OptValueParse};
+use network;
 use std::env;
 pub struct Cli {}
 
@@ -15,7 +16,7 @@ impl Cli {
     }
 }
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, Clone)]
 pub struct Config {
     pub genesis_reward_addr: String,
     pub balance_addr: String,
@@ -143,7 +144,7 @@ impl Config {
             .unwrap(); // map_err alrendy exit if it is err, so unwrap is safe.
     }
 
-    fn check_and_call(self, cmd: Option<&str>) -> Result<(), String> {
+    fn check_and_call(&self, cmd: Option<&str>) -> Result<(), String> {
         println!("Match Cmd: {:?}", cmd);
         match cmd {
             Some("createblockchain") => {}
@@ -153,7 +154,10 @@ impl Config {
             Some("getblock") => {}
             Some("gettx") => {}
             Some("sendtx") => {}
-            Some("startnode") => {}
+            Some("startnode") => {
+                //static CONFIG: Config = Config::default();
+                //network::start_server(&CONFIG.node_id, &CONFIG.miner_addr);
+            }
             _ => unreachable!(),
         }
         Ok(())
