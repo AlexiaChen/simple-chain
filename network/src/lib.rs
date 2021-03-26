@@ -11,11 +11,7 @@ impl Server {
         };
     }
 
-    pub async fn start_server(
-        &self,
-        node_id: &'static str,
-        miner_addr: &'static str,
-    ) {
+    pub async fn start_server(&self, node_id: &str, miner_addr: &str) {
         let listen_end_point = format!("0.0.0.0:{}", node_id);
         let listener = TcpListener::bind(listen_end_point).await.unwrap();
 
@@ -28,10 +24,12 @@ impl Server {
     async fn process(&self, socket: TcpStream) {}
 }
 
-pub fn start_server(node_id: &'static str, miner_addr: &'static str) {
+pub fn start_server(node_id: String, miner_addr: String) {
     let server: Server = Server::new();
 
     tokio::spawn(async move {
-        server.start_server(node_id, miner_addr).await;
+        server.start_server(&node_id, &miner_addr).await;
     });
+
+    println!("eeeee");
 }
