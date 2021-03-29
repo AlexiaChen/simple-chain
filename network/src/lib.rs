@@ -31,5 +31,5 @@ pub fn start_server(node_id: String, miner_addr: String) {
         server.start_server(&node_id, &miner_addr).await;
     });
 
-    println!("eeeee");
+    println!("server started.");
 }
